@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Smile Keepers Foundation</title>
+
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <meta
+      name="description"
+      content="Family of students to embrace the needy!"
+
+    />
+
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style >
+      body {
+  background-color: #eee;
+}
+.hello {
+  opacity: 1 !important;
+}
+.full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.full .content {
+  background-color: rgba(0,0,0,0.75) !important;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.byebye {
+  opacity: 0;
+}
+.byebye:hover {
+  transform: scale(0.2) !important;
+}
+.gallery {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 8px;
+}
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #333;
+  transition: all 1.5s ease;
+}
+.gallery img:hover {
+  box-shadow: 0 0 32px #333;
+}
+.gallery .content {
+  padding: 4px;
+}
+.gallery .gallery-item {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
+}
+@-moz-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 50%;
+    transform: rotate(0deg);
+  }
+}
+
+  </style>
+</head>
+<body id="myPage">
+  <nav class="navbar navbar-expand-lg " style="background-color: black;">
+
+      <a class="navbar-brand mx-3 text-center" href="index.html">
+        <img src="img\logo.jpeg" width="100" height="100" alt="logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div style="width: 20px;
+                    height: 2.225px;
+                    background-color: #22d8dd;
+                    margin: 6px 0;"></div>
+        <div style="width: 20px;
+                    height: 2px;
+                    background-color: #22d8dd;
+                    margin: 6px 0;"></div>
+        <div style="width: 20px;
+                    height: 2px;
+                    background-color: #22d8dd;
+                    margin: 6px 0;"></div>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto" style="font-style: italic; font-weight: bold;">
+
+          <li class="nav-item mx-5">
+             <a class="nav-link text-center" href="gallery.html" style="color: #22d8dd;">Portfolio</a>
+          </li>
+           <li class="nav-item mx-5">
+             <a class="nav-link text-light text-center" href="programs.html">Programs</a>
+          </li>
+          <li class="nav-item mx-5">
+             <a class="nav-link text-light text-center" href="donate.html" >Donate</a>
+          </li>
+          <li class="nav-item mx-5">
+             <a class="nav-link text-light text-center" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+  </nav>
+  <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_0889.jpg" alt=""></div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_2391.jpg" alt=""></div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4988.JPG" alt=""></div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_1299.jpg" alt=""></div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_2456.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\img.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_0999.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_2476.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5219.JPG" alt=""></div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4946.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4941.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4975.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4996.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4986.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5085.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4972.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4990.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4976.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4989.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_2442.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5106.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5066.JPG" alt=""></div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5262.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5071.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5108.JPG" alt=""></div>
+        </div>
+         <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4925.JPG" alt=""></div>
+        </div>
+         <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5182.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_160923.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5283.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210501_133756.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210501_134000.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210501_133945.jpg" alt=""></div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG-20190915-WA0579.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161033.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161128.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161202.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161015.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161147.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161230.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_160957.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161243.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161219.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG20200119180350.jpg" alt=""></div>
+        </div>
+         <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161102.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG-20210501-WA0021_1.jpg" alt=""></div>
+        </div>
+
+         <div class="gallery-item">
+            <div class="content"><img src="img\gallery\PhotoGrid_1579689698386.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_20210508_161302.jpg" alt=""></div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG-20190915-WA0604.jpg" alt=""></div>
+        </div>
+         
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_4933.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG_5098.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG-20210503-WA0010.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\Screenshot_2021-05-08-16-19-55-92.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\Screenshot_2021-05-08-16-20-26-47.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\Screenshot_2021-05-08-16-19-49-58.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img\gallery\IMG-20210501-WA0009_1.jpg" alt=""></div>
+        </div>
+        
+    </div>
+    <footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="fa fa-chevron-up mt-5"></span>
+  </a>
+  
+    <div class=" mt-5 text-center">
+      <h6>&copy; 2021 | SmileKeepers Foundation</h6>
+    </div>
+      
+</footer>
+     <script>
+         var gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+    if (item.complete) {
+        console.log(item.src);
+    }
+    else {
+        item.addEventListener('load', function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+        });
+    }
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
+$(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== '') {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              900,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+
+        $(window).scroll(function () {
+          $('.slideanim').each(function () {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass('slide');
+            }
+          });
+        });
+      });
+     </script>
+</body>
+</html>
